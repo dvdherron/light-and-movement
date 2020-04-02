@@ -1,0 +1,162 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: black;
+}
+
+body {
+  margin: 0;
+  color: white;
+  /* font-family: "Inter var", sans-serif; */
+  /* font-variation-settings: "wght" 900; */
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 1rem 0 1rem -0.3rem;
+  /* max-width: 50em;
+  max-inline-size: 50em; */
+}
+
+header {
+  display: grid;
+  grid-template-columns: 0.5vw 0.7ch max-content 0.5vw;
+  grid-template-rows: auto;
+  /* justify-content: center; */
+}
+
+.info {
+  grid-column: 3 / -1;
+  padding-inline-start: 1.15em;
+  --tt-key: smallTrans;
+  --tt-max: 960;
+}
+
+@keyframes smallTrans {
+  0% {
+    font-size: 0.725rem;
+    font-variation-settings: "wght" 250;
+  }
+  100% {
+    font-size: 1rem;
+    font-variation-settings: "wght" 300;
+  }
+}
+
+.headline {
+  display: contents;
+}
+
+.headline span {
+  --tt-key: textTrans;
+  --tt-max: 960;
+}
+
+.headline span:nth-of-type(odd) {
+  grid-column: 2 / -1;
+}
+
+.headline span:nth-of-type(even) {
+  grid-column: 3 /-1;
+}
+
+.first {
+  grid-row: 2;
+}
+
+.second {
+  grid-row: 3;
+}
+
+.third {
+  grid-row: 4;
+}
+
+.fourth {
+  grid-row: 5;
+}
+
+.fifth {
+  grid-row: 6;
+}
+
+.sixth {
+  grid-row: 7;
+}
+
+.seventh {
+  grid-row: 8;
+}
+
+.eighth {
+  grid-row: 9;
+}
+
+.text_trans {
+  --tt-key: textTrans;
+  --tt-max: 960;
+}
+
+@keyframes textTrans {
+  0% {
+    font-variation-settings: "wght" 500;
+  }
+  20% {
+    font-size: 2.2rem;
+    opacity: 0.7;
+  }
+  50% {
+    font-size: 9.3vw;
+  }
+  100% {
+    font-size: 9.15vw;
+    font-variation-settings: "wght" 650;
+    opacity: 0.75;
+  }
+}
+
+@media screen and (min-width: 530px) {
+  header {
+    grid-template-columns: 0.5vw 0.8ch max-content 0.5vw;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  header {
+    grid-template-columns: 0.5vw 1.2ch max-content 0.5vw;
+    /* justify-content: center; */
+  }
+}
+
+@media screen and (min-width: 920px) {
+  header {
+    grid-template-columns: 0.5vw 1.1rem max-content 0.5vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin-left: -1.2rem;
+  }
+  header {
+    grid-template-columns: 0.5vw 1.35rem max-content 0.5vw;
+  }
+}
+
+/* to do: make text bigger past medium breakpoint
+make it full screen? or no? keep content-body narrow and in the middle? */
